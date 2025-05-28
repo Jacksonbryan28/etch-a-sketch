@@ -1,0 +1,7 @@
+.container {
+  background-color: blue;
+  padding: 20px;
+}
+.child {
+  background-color: red;
+}
