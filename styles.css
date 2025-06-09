@@ -1,7 +1,10 @@
 .container {
   background-color: blue;
-  padding: 20px;
+  display: flex;
+  width: 960px;
 }
 .child {
   background-color: red;
+  border-style: solid;
+  border-color: black;
 }
