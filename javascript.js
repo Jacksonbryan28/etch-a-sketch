@@ -63,6 +63,8 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
   gridDensity = prompt("Enter a number between 1-100");
-  console.log(gridDensity);
-  resizeGrid(gridDensity);
+  if (gridDensity > 0 && gridDensity <= 100) {
+    console.log(gridDensity);
+    resizeGrid(gridDensity);
+  }
 });
