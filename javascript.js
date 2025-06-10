@@ -14,11 +14,12 @@ for (i = 0; i < 16; i++) {
   }
 }
 
-//Selects all divs in the DOM
-const divList = document.querySelectorAll("div");
+//selects all dives within the container
+const divList = container.querySelectorAll("div");
+
 //Adds a background color when a div is hovered
 divList.forEach((div) => {
   div.addEventListener("mouseenter", () => {
-    div.classList.add("hover");
+    div.style.backgroundColor = "blue";
   });
 });

@@ -1,7 +1,7 @@
 .container {
   background-color: blue;
   display: flex;
-  width: 816px;
+  width: 800px;
   flex-wrap: wrap;
 }
 /* .child {
