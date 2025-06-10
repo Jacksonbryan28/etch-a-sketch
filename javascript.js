@@ -13,3 +13,10 @@ for (i = 0; i < 16; i++) {
     container.appendChild(div);
   }
 }
+
+const divList = document.querySelectorAll("div");
+divList.forEach((div) => {
+  div.addEventListener("mouseenter", () => {
+    div.classList.add("hover");
+  });
+});
