@@ -1,6 +1,7 @@
 const container = document.querySelector("#container");
 container.style.backgroundColor = "pink";
 let gridDensity = 16;
+resizeGrid(16);
 
 function createGrid(dimension) {
   for (i = 0; i < dimension; i++) {
@@ -18,8 +19,10 @@ function createGrid(dimension) {
 }
 
 function resizeGrid(input) {
+  //clear grid
+  gridClear();
   const containerWidth = 960;
-  let divWidth = 0;
+  let divWidth = 50;
   //take input number and divide 960 by that
   divWidth = containerWidth / input;
   console.log(divWidth);
@@ -41,6 +44,17 @@ function resizeGrid(input) {
     div.classList.toggle("square");
     div.style.width = divWidth + "px";
     div.style.height = divWidth + "px";
+  });
+}
+
+//clear the grid when a new input is selected
+function gridClear() {
+  //selects all dives within the container
+  const divList = container.querySelectorAll("div");
+
+  //Adds a background color when a div is hovered
+  divList.forEach((div) => {
+    container.removeChild(div);
   });
 }
 
