@@ -35,7 +35,14 @@ function resizeGrid(input) {
   //Adds a background color when a div is hovered
   divList.forEach((div) => {
     div.addEventListener("mouseenter", () => {
-      div.style.backgroundColor = "blue";
+      //random color
+      let red = getRandomInt(0, 255);
+      let green = getRandomInt(0, 255);
+      let blue = getRandomInt(0, 255);
+      let newColor = `rgb(${red},${green},${blue})`;
+      div.style.backgroundColor = newColor;
+      //Set color
+      // div.style.backgroundColor = "blue";
     });
   });
 
@@ -56,6 +63,13 @@ function gridClear() {
   divList.forEach((div) => {
     container.removeChild(div);
   });
+}
+
+//created random int from input ranges
+function getRandomInt(min, max) {
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 
 //adds variable to button
